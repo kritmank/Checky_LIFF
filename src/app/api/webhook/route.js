@@ -249,6 +249,7 @@ export async function POST(request) {
 
         const student = data[0];
 		const qrcode_url = hostname + "/api/qrcode/" + student.student_id + ".png";
+		console.log("QR Code:", qrcode_url);
 
         // Config Flex Message
         flexMsg.body.contents[0].contents[0].contents[0].url = profile.pictureUrl;
