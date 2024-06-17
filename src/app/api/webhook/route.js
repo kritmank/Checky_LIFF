@@ -83,7 +83,7 @@ export async function POST(request) {
         client.release();
 
         if (data.length == 0) {
-            reply(event.replyToken, "-- ไม่พบข้อมูล --\n\nกรุณากด\n*Check Attendance*\n\nเพื่อลงทะเบียน 🔻");
+            reply(event.replyToken, "-- ไม่พบข้อมูล --\n\nกรุณากด\n*Register*\n\nเพื่อลงทะเบียน 🔻");
             return new NextResponse({ status: 200 });
         }
 
