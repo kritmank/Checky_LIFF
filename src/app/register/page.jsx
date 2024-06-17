@@ -32,7 +32,6 @@ const RegisterUserLIFF = () => {
         await liff.ready
         const profile = await liff.getProfile()
         setProfile(profile)
-        fetchProfile()
     }
 
     const fetchProfile = async () => {
@@ -188,6 +187,10 @@ const RegisterUserLIFF = () => {
     useEffect(() => {
         init();
     })
+
+    useEffect(() => {
+        if (profile.userId) fetchProfile()
+    }, [profile.userId])
 
     useEffect(() => {
         if (allClass.length === 0) fetchClass();

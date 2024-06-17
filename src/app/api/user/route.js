@@ -18,7 +18,7 @@ export async function POST(request) {
         if (data.length === 0) {
             return Response.json({ code: 404, message: "User not found" }, { status: 404 })
         }
-        return Response.json({ code: 200, message: "User found" }, { status: 200 })
+        return Response.json({ code: 200, message: "User found", studentId: data[0].student_id }, { status: 200 })
     } 
     catch (err) {
         console.error("Error fetching data", err);

@@ -25,7 +25,6 @@ const UserLIFF = () => {
         await liff.ready
         const profile = await liff.getProfile()
         setProfile(profile)
-        fetchProfile()
     }
 
     const fetchProfile = async () => {
@@ -56,6 +55,10 @@ const UserLIFF = () => {
     useEffect(() => {
         init();
     })
+
+    useEffect(() => {
+        if (profile.userId) fetchProfile()
+    }, [profile.userId])
 
     return (
         <Loader />
