@@ -1,0 +1,178 @@
+{
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "margin": "lg",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png",
+                "size": "full",
+                "aspectMode": "cover"
+              }
+            ],
+            "cornerRadius": "100px",
+            "width": "90px",
+            "height": "90px"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "[displayName]",
+                "weight": "bold",
+                "size": "md",
+                "margin": "md"
+              },
+              {
+                "type": "text",
+                "text": "[studentId]",
+                "margin": "md"
+              }
+            ],
+            "justifyContent": "center",
+            "offsetStart": "lg"
+          }
+        ],
+        "justifyContent": "center",
+        "alignItems": "center"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": []
+      }
+    ],
+    "spacing": "xl",
+    "paddingAll": "20px",
+    "background": {
+      "type": "linearGradient",
+      "angle": "85deg",
+      "startColor": "#fbc4ab",
+      "endColor": "#a3cef1"
+    }
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Information",
+            "size": "xl",
+            "weight": "bold",
+            "offsetStart": "lg"
+          }
+        ],
+        "offsetTop": "sm"
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Name",
+            "flex": 1,
+            "size": "sm",
+            "color": "#aaaaaa"
+          },
+          {
+            "type": "text",
+            "text": "[Name]",
+            "flex": 3,
+            "size": "sm"
+          }
+        ],
+        "margin": "lg",
+        "offsetStart": "xxl",
+        "paddingBottom": "xs",
+        "paddingTop": "md"
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Class",
+            "flex": 1,
+            "size": "sm",
+            "color": "#aaaaaa"
+          },
+          {
+            "type": "text",
+            "text": "[Class]",
+            "flex": 3,
+            "size": "sm"
+          }
+        ],
+        "margin": "lg",
+        "offsetStart": "xxl",
+        "paddingBottom": "xs"
+      },
+      {
+        "type": "box",
+        "layout": "baseline",
+        "contents": [
+          {
+            "type": "text",
+            "text": "Dorm",
+            "flex": 1,
+            "size": "sm",
+            "color": "#aaaaaa"
+          },
+          {
+            "type": "text",
+            "text": "[Dorm]",
+            "flex": 3,
+            "size": "sm"
+          }
+        ],
+        "margin": "lg",
+        "offsetStart": "xxl",
+        "paddingBottom": "xxl"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://pbl.kritmank-domain.pw/api/qrcode/64991032.png",
+            "size": "full"
+          }
+        ],
+        "width": "180px",
+        "height": "180px"
+      },
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "SHOW QR",
+          "uri": "https://liff.line.me/2000606373-GRERPW09/qrcode"
+        }
+      }
+    ],
+    "flex": 0,
+    "alignItems": "center"
+  }
+}

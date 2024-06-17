@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import pool from "@/utils/db";
-import fs from "fs";
 
 const MessagingApiClient =
 	require("@line/bot-sdk").messagingApi.MessagingApiClient;
@@ -90,7 +89,18 @@ export async function POST(request) {
         const student = data[0];
 		const qrcode_url = hostname + "/api/qrcode/" + student.student_id;
 
-		const flexMsg = JSON.parse(fs.readFileSync("src/app/flex_msg.json", "utf-8"));
+		// Fetch Flex Message JSON
+        let flexMsg;
+        try {
+            const res = await fetch("https://pbl.kritmank-domain.pw/flex_msg.json");
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            flexMsg = await res.json();
+        } catch (err) {
+            console.error('Error fetching flex_msg.json:', err);
+            return new NextResponse({ status: 500, statusText: 'Error fetching flex message' });
+        }
 
         // Config Flex Message
         flexMsg.body.contents[0].contents[0].contents[0].url = profile.pictureUrl;
